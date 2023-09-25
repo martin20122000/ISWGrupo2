@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Realizar pedido a comercio adherido</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista en dispositivos móviles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <h1>Pedido a comercio adherido</h1>
+    <div class="carrito" id="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th class="encabezado">Producto</th>
+                    <th class="encabezado">Cantidad</th>
+                    <th class="encabezado">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Producto 1</td>
+                    <td>5</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Producto 2</td>
+                    <td>3</td>
+                    <td>$15.00</td>
+                </tr>
+                <tr>
+                    <td>Producto 3</td>
+                    <td>2</td>
+                    <td>$8.50</td>
+                </tr>
+                <tr>
+                    <td>Producto 4</td>
+                    <td>7</td>
+                    <td>$12.75</td>
+                </tr>
+                <tr>
+                    <td>Producto 5</td>
+                    <td>4</td>
+                    <td>$9.99</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total">
+            <label id="total">Total: $56,25</label>
+        </div>
+        
+
+        <div class="botones">
+            <button id="vaciarCarrito">Vaciar Carrito</button>
+            <button id="restablecer">Restablecer</button>
+        </div>
+
+    </div>
+    <form id="miFormulario">
+
+        <div class="Direccion">
+            <h2>Dirección</h2>
+            <label>Seleccione la ciudad: </label>
+            <select id="ciudades" name="ciudades" required>
+                <option value="carlosPaz">Villa Carlos Paz</option>
+                <option value="calamuchita">Santa Rosa de Calamuchita</option>
+                <option value="villaBelgrano">Villa Gral Belgrano</option>
+                <option value="cosquin">Cosquin</option>
+                <option value="minaClavero">Mina Clavero</option>
+                <option value="nono">Nono</option>
+
+            </select> <br>
+            <label>Ingrese la calle: </label> 
+            <input type="text" id="calle" placeholder="Calle" required> <br>
+            <label>Ingrese el número de calle: </label> 
+            <input type="number" id="numeroCalle" required> <br>
+            <label>Ingrese una referencia: </label> 
+            <input type="text" id="referencia" placeholder="Referencia"> <br>
+        </div>
+
+
+        <br>
+        <div class="Pago">
+            <h2>Pago</h2>
+            <label for="formaPago" required>Selecciona una opción:</label>
+            <select id="formaPago">
+                <option value="efectivo">Efectivo</option>
+                <option value="debito">Debito</option>
+                <option value="credito">Credito</option>
+            </select>
+
+            <div id="pagoEfectivo">
+                <label>Ingrese la cantidad con la que va a abonar: </label>
+                <input type="number" id="cantAbonar" required> <br>
+            </div>
+
+
+            <div id="pagoTarjeta" style="display: none;">
+                <label for="numero_tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="numero_tarjeta" name="numero_tarjeta" minlength="19" oninput="validarTipoTarjeta(this.value)">
+                <p id="resultado"></p>
+                
+
+                <label for="nombre_apellido">Nombre y apellido del Titular:</label>
+                <input type="text" id="nombre_apellido" name="nombre_apellido" >
+                <br>
+
+                <label for="fecha_vencimiento">Fecha de Vencimiento (MM/AAAA):</label>
+                <input type="text" id="fecha_vencimiento" >
+                <br>
+
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" name="cvc" maxlength="3" pattern="\d{3}" >
+                <br>
+            </div>
+        </div>
+
+        <br>
+        <div class="Recepcion">
+            <h2>Recepción</h2>
+            <input type="radio" id="recepcion1" name="recepcion" checked=true required>Lo antes posible<br>
+            <input type="radio" id="recepcion2" name="recepcion" >Programar<br>
+            <div id="programarFecha" style="display: none;">
+                <input type="datetime-local" id="fecha_hora" >
+            </div>
+        </div>
+        
+        
+    
+
+        <br>
+        <input value="Enviar" id ="enviar" type="submit">
+    </form>
+
+ 
+
+    <script src="pedidoComercioAdherido.js"></script>
+    
+    
+
+
+
+
+    
+
+
+    
+
+    
+</body>
+</html>

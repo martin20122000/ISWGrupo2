@@ -1,0 +1,84 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 5px;
+
+}
+
+/* Estilo para todas las celdas de la columna "Cantidad" */
+td:nth-child(2) {
+    width: 10%; /* Asigna un ancho del 20% para la columna "Cantidad" */
+}
+
+td:nth-child(3) {
+    width: 40%; /* Asigna un ancho del 40% para la columna "Precio" */
+}
+
+th.encabezado {
+    background-color: #0c4792; /* Color de fondo para el encabezado */
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+} 
+.carrito {
+    margin: 0 auto; /* Establece un margen automático en los lados izquierdo y derecho */
+    text-align: center; /* Centra el contenido de la tabla */
+    margin-bottom: 20px;
+}
+
+.total {
+    font-weight: bold;
+    width: 75%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+
+/*margenes inferiores*/
+select , input {
+    margin-bottom: 10px;
+}
+
+
+.Direccion, .Pago, .Recepcion {
+    background-color: #5381bb;
+    border-radius: 1%;
+    border-color: #0c4792;
+
+}
+
+
+
+/* Estilo para el botón "Enviar" */
+#enviar {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centra horizontalmente el contenido */
+    font-weight: bold;
+}
+
+
+/*desactiva el botón dependiendo de la tarjeta*/
+#enviar:disabled{
+    background-color: lightgray;
+    color: gray;
+}
+
+/* Cambia el color de fondo al pasar el ratón */
+#enviar:hover {
+    background-color: #2980b9;
+}
+
+
