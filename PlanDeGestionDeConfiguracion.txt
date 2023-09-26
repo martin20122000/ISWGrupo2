@@ -1,0 +1,18 @@
+Estructura inicial propuesta del repositorio:
+ISWGrupo2
+	Parciales
+	MaterialConceptual
+		LibrosRecomendados
+		Filminas
+	Ejercitacion
+		TpEvaluable
+			TP<N>Entregado
+	Resueltos
+		Ejercicios
+	Templates
+
+Reglas de nombrado: PascalCase
+
+Definición de la línea base: Hemos decicido marcar este momento (Commit "LineaBase", 26/09/2023) del repositorio como línea base
+ya que están subidos todos los archivos relevantes disponibles actualmente en la UV y nuestro
+TP 6 programado.
