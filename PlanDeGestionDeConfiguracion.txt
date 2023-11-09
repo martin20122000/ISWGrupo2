@@ -4,6 +4,7 @@ ISWGrupo2
 	MaterialConceptual
 		LibrosRecomendados
 		Filminas
+		TrabajosConceptuales
 	Ejercitacion
 		TpEvaluable
 			TP<N>Entregado
@@ -16,3 +17,5 @@ Reglas de nombrado: PascalCase
 Definición de la línea base: Hemos decicido marcar este momento (Commit "LineaBase", 26/09/2023) del repositorio como línea base
 ya que están subidos todos los archivos relevantes disponibles actualmente en la UV y nuestro
 TP 6 programado.
+
+Definicion de la ultima linea base: Hemos decidido marcar la linea base en el momento de subir la presentación de la charla TED dado que no se realizaran mas cambios luego de dicho evento.
